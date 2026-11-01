@@ -73,7 +73,13 @@ int calculateChunk(int splitValue,int chunk){
   int secondChunk=0;
   int thirdChunk=0;
 
+int buttonState;
+int timesPressed=0;
+int previousTime=millis();
+int interval=500;
+
 void loop(){
+
   int input;
   int splitInput;
 
