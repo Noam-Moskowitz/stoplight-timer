@@ -55,21 +55,21 @@ Here are the four states of the circuit:
 
 **State 0 — All LEDs Off**
 
-![All LEDs Off](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/manual_switch/manual_switch_state_0.jpeg)
+![All LEDs Off](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/manual_switch/media/manual_switch_state_0.jpeg)
 
 **State 1 — Green LED**
 
-![Green LED](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/manual_switch/manual_switch_state_1.jpeg)
+![Green LED](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/manual_switch/media/manual_switch_state_1.jpeg)
 
 **State 2 — Green + Yellow LEDs**
 
-![Green and Yellow LEDs](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/manual_switch/manual_switch_state_2.jpeg)
+![Green and Yellow LEDs](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/manual_switch/media/manual_switch_state_2.jpeg)
 
 **State 3 — All Three LEDs**
 
-![All Three LEDs](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/manual_switch/manual_switch_state_3.jpeg)
+![All Three LEDs](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/manual_switch/media/manual_switch_state_3.jpeg)
 
 **Video — Manual Switch in Action**
 
-[Watch the button and LEDs in action](https://github.com/Noam-Moskowitz/stoplight-timer/blob/main/manual_switch/manual_switch_in_action.mp4)
+[Watch the button and LEDs in action](https://github.com/Noam-Moskowitz/stoplight-timer/blob/main/manual_switch/media/manual_switch_in_action.mp4)
 
