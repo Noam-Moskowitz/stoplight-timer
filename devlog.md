@@ -69,6 +69,10 @@ Here are the four states of the circuit:
 
 ![All Three LEDs](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/manual_switch/media/manual_switch_state_3.jpeg)
 
+**Timer Finished**
+
+![Timer Finished](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/set_timer/media/end.jpeg)
+
 ### Fourth Attempt — Getting the Timer Working (Sort Of)
 
 After confirming I could track button presses and control the LEDs, I decided to try something a little more controlled. **Could I get a fixed 30-second timer working and have the LEDs correctly show which third of the countdown I was in?**
@@ -122,9 +126,6 @@ Here are the four states of the 30-second countdown:
 
 ![Last 10 Seconds](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/set_timer/media/last-10s.jpeg)
 
-**Timer Finished**
-
-![Timer Finished](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/set_timer/media/end.jpeg)
 
 **Video — Manual Switch in Action**
 
