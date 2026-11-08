@@ -69,6 +69,63 @@ Here are the four states of the circuit:
 
 ![All Three LEDs](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/manual_switch/media/manual_switch_state_3.jpeg)
 
+### Fourth Attempt — Getting the Timer Working (Sort Of)
+
+After confirming I could track button presses and control the LEDs, I decided to try something a little more controlled. **Could I get a fixed 30-second timer working and have the LEDs correctly show which third of the countdown I was in?**
+
+I also wanted to take this opportunity to figure out how the ESP32's built-in pull-up and pull-down resistors actually work.
+
+For this test, I wrote a separate script: [set_timer.ino](https://github.com/Noam-Moskowitz/stoplight-timer/blob/main/set_timer/set_timer.ino).
+
+#### Figuring Out the Internal Resistors
+
+As I learned in my previous attempt, a button connected to a GPIO pin without a pull-up or pull-down resistor can leave the pin floating, giving random HIGH/LOW readings when the button isn't pressed. Last time, I solved this by adding an external pull-down resistor.
+
+This time, I wanted to try using `INPUT_PULLUP` and `INPUT_PULLDOWN` instead.
+
+So I removed the resistor, wired one side of the button to power, the other to ground, and connected the GPIO pin somewhere in between. Compiled, uploaded, and... the button was constantly being pressed.
+
+After some messing around with the wiring and debugging, it clicked.
+
+**With `INPUT_PULLUP`, the button only needs to connect the GPIO pin to GND. With `INPUT_PULLDOWN`, it needs to connect the GPIO pin to 3.3V.**
+
+The ESP32 uses its internal resistors to keep the pin in a defined state when the button isn't pressed:
+
+- `INPUT_PULLUP`: Normally HIGH, LOW when pressed.
+- `INPUT_PULLDOWN`: Normally LOW, HIGH when pressed.
+
+Basically, I no longer need the external resistor or to wire both power and ground to the button. The ESP32 handles the pull-up/pull-down part internally.
+
+#### Testing the 30-Second Timer
+
+Once I got the button working, the rest was pretty straightforward.
+
+I set the timer to 30 seconds, split it into three 10-second chunks, and had the LEDs change depending on which third of the countdown I was in. I also added the ability to restart the timer with a button press.
+
+And it worked!
+
+It's still a simplified version with a fixed timer, but at least now I know I can get the countdown, LEDs, and button working together.
+
+#### Test Results
+
+Here are the four states of the 30-second countdown:
+
+**First 10 Seconds — Green**
+
+![First 10 Seconds](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/set_timer/media/first-10s.jpeg)
+
+**Middle 10 Seconds — Yellow**
+
+![Middle 10 Seconds](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/set_timer/media/middle-10s.jpeg)
+
+**Last 10 Seconds — Red**
+
+![Last 10 Seconds](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/set_timer/media/last-10s.jpeg)
+
+**Timer Finished**
+
+![Timer Finished](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/set_timer/media/end.jpeg)
+
 **Video — Manual Switch in Action**
 
 [Watch the button and LEDs in action](https://github.com/Noam-Moskowitz/stoplight-timer/blob/main/manual_switch/media/manual_switch_in_action.mp4)
