@@ -69,9 +69,9 @@ Here are the four states of the circuit:
 
 ![All Three LEDs](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/manual_switch/media/manual_switch_state_3.jpeg)
 
-**Timer Finished**
+**Video — Manual Switch in Action**
 
-![Timer Finished](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/set_timer/media/end.jpeg)
+[Watch the button and LEDs in action](https://github.com/Noam-Moskowitz/stoplight-timer/blob/main/manual_switch/media/manual_switch_in_action.mp4)
 
 ### Fourth Attempt — Getting the Timer Working (Sort Of)
 
@@ -126,8 +126,6 @@ Here are the four states of the 30-second countdown:
 
 ![Last 10 Seconds](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/set_timer/media/last-10s.jpeg)
 
+**Timer Finished**
 
-**Video — Manual Switch in Action**
-
-[Watch the button and LEDs in action](https://github.com/Noam-Moskowitz/stoplight-timer/blob/main/manual_switch/media/manual_switch_in_action.mp4)
-
+![Timer Finished](https://raw.githubusercontent.com/Noam-Moskowitz/stoplight-timer/main/set_timer/media/end.jpeg)
