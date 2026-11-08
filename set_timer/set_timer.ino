@@ -8,7 +8,7 @@ int buttonState;
 int butttonPressed = 0;
 int previousTime = millis();
 int interval = 500;
-int timer=30;
+int timer = 30;
 
 void setup()
 {
@@ -71,31 +71,38 @@ void loop()
     if (millis() - interval > previousTime)
     {
 
-      isButtonPressed=!isButtonPressed;
+      isButtonPressed = !isButtonPressed;
 
-     if (!isButtonPressed){ timer=30;}
+      if (!isButtonPressed)
+      {
+        timer = 30;
+      }
+    }
   }
 
-
-  
-  }
-  if(isButtonPressed){
+  if (isButtonPressed)
+  {
     timer--;
 
-      
-
-      if (timer >= 20) {
-        lightGreen();
-      } else if (timer >= 11 && timer < 20) {
-        lightYellow();
-      } else if (timer >= 0 && timer <= 10) {
-        lightRed();
-      } else {
-        hideGreen();
-        hideYellow();
-        hideRed();
-      }
-
-      delay(1000);
+    if (timer >= 20)
+    {
+      lightGreen();
     }
+    else if (timer >= 11 && timer < 20)
+    {
+      lightYellow();
+    }
+    else if (timer >= 0 && timer <= 10)
+    {
+      lightRed();
+    }
+    else
+    {
+      hideGreen();
+      hideYellow();
+      hideRed();
+    }
+
+    delay(1000);
+  }
 }
